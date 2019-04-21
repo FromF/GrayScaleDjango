@@ -35,7 +35,6 @@ pip install --upgrade pip
 * [pip で OpenCV のインストール](https://qiita.com/fiftystorm36/items/1a285b5fbf99f8ac82eb)
 
 
-
 ## セットアップの参考サイト
 
 * [pythonのインストール（Mac）](https://qiita.com/okhrn/items/935cf187aec5cf144558)
