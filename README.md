@@ -1,13 +1,39 @@
-# DjangoFirstPrj
-Python DjangoでPostなどができるプロジェクト
+# グレースケール変換
+Python DjangoとOpen CVでグレースケールに変換する
 
-## 作成したプロジェクト
+JPGファイルをアップするとグレースケールになったJPGファイルが表示される
 
-masterよりブランチして各種プロジェクトを作成中...
+## 参考サイト
 
-* [Hello World](https://github.com/FromF/DjangoFirstPrj/tree/HelloWorld)
-* [グレースケール変換](https://github.com/FromF/DjangoFirstPrj/tree/GrayScale)
-* [Django2 でユーザー認証（ログイン認証）を実装するチュートリアル](https://github.com/FromF/DjangoFirstPrj/tree/PostTutorial)
+* [Djangoで画像処理アプリケーションを作った](https://qiita.com/takuto412/items/fb2d84c2a0ac03522005)
+* [【Django】画像をアップロードして表示する](https://ymgsapo.com/show-image-imagefield/)
+* [Django データベース操作 についてのまとめ](https://qiita.com/okoppe8/items/66a8747cf179a538355b)
+
+## ライブラリ
+
+### OpenCVインストール
+
+```
+pip install opencv-python
+```
+
+### Pillowインストール
+
+画像を扱うときに使うライブラリ
+
+```
+pip install Pillow
+```
+
+### importがうまく行かないとき
+
+```
+pip install --upgrade pip
+```
+
+### インストールの参考サイト
+* [pip で OpenCV のインストール](https://qiita.com/fiftystorm36/items/1a285b5fbf99f8ac82eb)
+
 
 ## セットアップの参考サイト
 
@@ -35,14 +61,21 @@ $ django-admin startproject [ProjectName]
 * [Djangoプロジェクトの作成](https://www.python-izm.com/web/django/django_project/)
 * [Building A Real-Time iOS Chat Application With Django](http://lucasjackson.io/realtime-ios-chat-with-django/)
 
-## データベースのマイグレーション
-
-```
-python manage.py migrate
-```
-
 ## アプリケーションの追加
 
 ```
-python manage.py startapp [ApplicationName]
+python manage.py startapp GrayScale
+```
+
+## データベースのマイグレーション
+
+```
+python manage.py makemigrations GrayScale
+python manage.py migrate
+```
+
+## 管理者アカウント作成
+
+```
+python manage.py createsuperuser
 ```
